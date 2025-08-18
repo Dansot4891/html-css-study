@@ -1,0 +1,108 @@
+tr:not(:last-child){
+    border-bottom: 1px solid grey;
+}
+
+td {
+    padding: 12px 0px;
+    padding-right: 16px;
+}
+
+p{
+    margin: 0px;
+}
+
+thead{
+    font-size: 20px;
+    color: grey;
+    text-align: right;
+    border-bottom: 1px solid grey;
+}
+
+table{
+    /* cell들간 간격 제거 */
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.table-box{
+    width: 100%;
+    background-color: aquamarine;
+    padding: 40px 60px;
+    display: inline-block
+}
+
+.item-name{
+    text-align: left;
+}
+
+.cart-bottom-row{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-edit-text {
+  text-decoration: underline;
+  text-decoration-skip-ink: none; /* 이것은 일부 글꼴의 '잉크 생략'만 막아줄 뿐 */
+}
+
+.cart-button{
+    padding: 12px;
+    color: white;
+    background-color: darkslateblue;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+/* pseudo-class */
+/* ⚠️ focus 설정이 active 설정보다 무조건 앞에 와야 active가 발동된다. */
+/* 마우스 올렸을 때 */
+.cart-button:hover{
+    background-color: chocolate;
+}
+
+/* 클릭 후 포커싱됐을 때 */
+.cart-button:focus{
+    background-color: aqua;
+}
+
+/* 클릭 했을 때 */
+.cart-button:active{
+    background-color: blue;
+}
+
+.cart-link{
+    text-decoration: none;
+}
+
+/* 링크 방문 전 스타일 */
+.cart-link:link{
+    color: purple;
+}
+
+/* 링크 방문 후 스타일 */
+.cart-link:visited{
+    color: yellowgreen;
+}
+
+.main-bt{
+    padding: 12px;
+    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.bg-blue{
+    background-color: blue;
+}

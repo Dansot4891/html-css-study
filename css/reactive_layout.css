@@ -1,0 +1,40 @@
+body{
+    margin: 0px;
+}
+
+
+.test{
+    /* vw: 브라우저 폭에 비례 */
+    /* rem: 기본 폰트사이즈에 비례 -> 옛날 브라우저 사용할 때 많이 사용했음 */
+    /* rem: 내 폰트사이즈에 비례 */
+    width: 50vw; 
+    height: 100vh; /*vh: 브라우저 높이에 비례*/
+    font-size: 20px;
+    background: grey;
+}
+
+
+/* 현재 브라우저의 폭이 1200px 이하라면
+아래 css를 적용시킨다.
+⚠️ 해당 문법은 항상 맨 아래에 있어야한다.
+자주 사용하는 픽셀 단위를 다음과 같다.
+태블릿: 1200px, 992px
+모바일: 768px, 576px */
+@media screen and (max-width: 1200px){
+    .test {
+        font-size: 12px;
+    }
+    body{
+        margin: 12px;
+    }
+}
+
+/* 여러개 사용 가능 */
+@media screen and (max-width: 768px){
+    .test {
+        font-size: 36px;
+    }
+    body{
+        margin: 120px;
+    }
+}

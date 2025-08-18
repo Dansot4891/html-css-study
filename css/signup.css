@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'legend';
+    src: url(../font/Pretendard-Black.ttf);
+}
+
+.contact-us-box{
+    width: 400px;
+}
+
+.text-label{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    font-family: 'legend';
+    transform: rotate(0.03deg);
+}
+
+.text-field-box{
+    margin-top: 12px;
+    width: 100%;
+}
+
+.contact-us{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.text-field-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscribe-box {
+  display: flex;
+}
+
+.message-box{
+    height: 200px;
+}
+
+input[type=text]{
+    width: 100%;
+}
+
+input[type=email]{
+    width: 100%;
+}
+
+.contact-button{
+    padding: 12px 40px;
+    background-color: yellowgreen;
+    font-size: 20xp;
+    font-weight: bold;
+    color: white;
+    border: 0px;
+    border-radius: 4px;
+}
+
+p {
+  margin: 0;
+}

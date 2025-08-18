@@ -1,0 +1,11 @@
+.nav_bar li {
+    display: inline-block;
+    background: grey;
+    padding: 8px 12px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.nav_bar a {
+    font-size: 32px;
+}
