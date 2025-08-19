@@ -1,0 +1,49 @@
+body{
+    margin: 0px;
+}
+
+.shopping-bg{
+    background-color: #eee;
+    padding: 20px;
+}
+
+.shopping-container{
+    display: flex;
+}
+
+.shopping-item{
+    margin: 8px;
+    width: 33%;
+    background-color: white;
+}
+
+.shopping-item img{
+    width: 100%;
+    display: block;
+}
+
+.stack{
+    position: relative;
+}
+
+.overlay{
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 50%;
+  background-color: grey;
+  opacity: 0;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.stack:hover .overlay{
+  opacity: 0.5;
+  transform: scaleY(1);          /* 🔹 아래→위로 펼침 */
+}
+
+.price-text{
+    margin: 24px 24px;
+    color: white;
+    font-size: 32px;
+}
