@@ -1,0 +1,178 @@
+p{
+    margin: 0px;
+}
+
+body{
+    margin: 0px;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+.portfolio-base-row{
+    display: flex;
+    justify-content: center;
+}
+
+/* ------------------ intro ------------------ */
+
+.portfolio-bg {
+  background: white;
+}
+
+
+.portfolio-intro{
+    background: linear-gradient(to bottom, #3fa5f8 0%, rgb(87, 147, 250) 100%);
+    padding: 40px 80px 0px 80px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio-btn{
+    background-color: rgb(105, 97, 97);
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-top: 12px;
+}
+
+.portfolio-intro-img{
+    margin-top: 80px;
+    width: 320px;
+    height: 320px;
+    display: block;
+}
+
+/* ------------------ other projects ------------------ */
+
+.portfolio-other-projects{
+    margin: auto;
+    padding: 40px 0px 40px 00px;
+    text-align: center;
+}
+
+/* ------------------ offer ------------------ */
+
+.portfolio-offer{
+    margin: auto;
+    background-color: rgb(60, 131, 222);
+    padding: 40px 0px 40px 00px;
+    text-align: center;
+    color: white;
+}
+
+.portfolio-offer-header{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.portfolio-offer-item{
+    margin: 20px;
+}
+
+.portfolio-offer-item i{
+    padding: 20px;
+    background-color: white;
+    color: rgb(60, 131, 222);
+    border-radius: 100%;
+    font-size: 24px;
+}
+
+.portfolio-offer-item-title{
+    margin: 12px 0px;
+}
+
+/* ------------------ card ------------------ */
+
+.portfolio-card{
+    text-align: center;
+    padding: 40px ;
+}
+
+.portfolio-card-image{
+    position: relative;
+    width: 45%;
+}
+
+.portfolio-card-image:hover .portfolio-card-border-box {
+  border: 24px solid white;
+}
+
+.portfolio-card-text-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 16px;
+  background-color: black;
+  opacity: 0.5;
+  padding-left: 10%;
+  padding-top: 10%;
+  text-align: left;
+  border: none;
+  transition: 0.5s;
+}
+
+.portfolio-card-border-box{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  transition: 0.5s;
+  z-index: 3;  /* 맨 위로 설정 */
+}
+
+.portfolio-card-text{
+    position: absolute;
+    color: white;
+    text-align: left;
+    left: 10%;
+    top: 20%;
+}
+
+.portfolio-card-text-header{
+    margin-bottom: 32px;
+    font-size: 24px;
+}
+
+.portfolio-card-image img{
+    display: block;
+    width: 100%;
+}
+
+.portfolio-card-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-card-item{
+    margin: 20px;
+}
+
+.portfolio-card-item i{
+    padding: 12px;
+    background-color: rgb(33, 85, 134);
+    color: white;
+    border-radius: 100%;
+    font-size: 20px;
+}
+
+/* ------------------ reactive screen ------------------ */
+
+/* 여러개 사용 가능 */
+@media screen and (max-width: 768px){
+    .portfolio-intro{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .portfolio-intro-img{
+        margin: auto;   /* 좌우 자동 여백 = 가로 중앙 정렬 */
+        margin-top: 40px;
+    }
+}
