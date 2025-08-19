@@ -18,6 +18,13 @@ div{
     width: 25%;
 }
 
+.text-box i {
+    background-color: burlywood;
+    padding: 24px 20px;
+    border-radius: 100%;
+    color: white;
+}
+
 .sub-text{
     font-size: 14px;
     font-weight: 300;

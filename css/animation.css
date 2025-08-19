@@ -1,0 +1,52 @@
+body{
+    margin: 0px;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+.shop-bg{
+    background-color: #eee;
+    padding: 12px;
+}
+
+.shop-stack{
+    position: relative;
+}
+
+.shop-container{
+    display: flex;
+}
+
+.shop-item{
+    width: 33%;
+    padding: 24px 24px;
+    display: block;
+}
+
+.shop-item img{
+    width: 100%;
+    display: block;
+}
+
+.overlay{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    opacity: 0;
+    
+    /* => opacity가 변하면 1초에 걸쳐서 변하게 해주세요 */
+    transition: opacity 1s;
+    
+    /* 애니메이션 속도를 더 자세히 설정 가능 */
+    /* transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) */
+}
+
+.shop-stack:hover {
+    opacity: 0.3;
+
+    /* 원래 자리로 올라오기 */
+}
