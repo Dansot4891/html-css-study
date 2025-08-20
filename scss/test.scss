@@ -1,0 +1,110 @@
+// scss의 사용처
+// 1. 어려운 단어 기억해야할 때 -> 색상값
+//    ex) $메인칼라: $2a4cb2
+// 2. 사칙연산이 필요할 때
+//    => +/- 연산만 가능 ⚠️ %/x 는 에러날 때가 많음
+//    ex) $font-size + 2
+
+// ------------------------------------------------
+// use 문법
+@use '_reset';
+
+.main-bg h4 {
+    font-size: 20px;
+}
+
+.main-bg button {
+    color: red;
+}
+// 위 코드와 아래 코드는 같음
+.main-bg {
+    h4 {
+        font-size: 20px;
+    }
+    button{
+        color: red;
+    }
+}
+
+
+// ------------------------------------------------
+// 변수 설정 방법
+
+$main-color: #2a4cb2;
+$font-size: 32px;
+
+.box{
+    width: 100%;
+    color: $main-color;
+    font-size: $font-size + 2;
+}
+
+// ------------------------------------------------
+// class를 복사해주는 @extends 문법
+// %로 선언시 임시 클래스, .으로 선언시 일반 클래스
+%btn {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+
+
+.btn-green {
+    @extend %btn;
+    color: green;
+}
+
+.btn-blue {
+    @extend %btn;
+    color: blue;
+}
+
+.btn-red {
+    @extend %btn;
+    color: red;
+}
+
+// ------------------------------------------------
+// hw
+// 배경색만 다르고 width, height, padding 값이 같은 div의 css 디자인해오기
+%base-div{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+
+.green-div{
+    @extend %base-div;
+    color: green;
+}
+
+.blue-div{
+    @extend %base-div;
+    color: blue;
+}
+
+.red-div{
+    @extend %base-div;
+    color: red;
+}
+
+// ------------------------------------------------
+// mixin 문법
+@mixin fontStyle($size, $params){
+    font-size: $size;
+    letter-spacing: -1px;
+    #{ $params }: white;
+}
+
+h2{
+    @include fontStyle(20px, background-color)
+}
+
+h3{
+    @include fontStyle(24px, color)
+}
+
+h4{
+    @include fontStyle(28px, color)
+}
+

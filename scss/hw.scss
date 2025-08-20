@@ -1,0 +1,90 @@
+// 1번 과제
+li{
+    list-style: none;
+    padding: 12px;
+    border-left: 1px solid rgb(183, 183, 183);
+    border-right: 1px solid rgb(183, 183, 183);
+    border-top: 1px solid rgb(183, 183, 183);
+    font-size: 16px;
+}
+
+li:last-child{
+    border-bottom: 1px solid rgb(183, 183, 183);
+}
+
+ul{
+    :hover{
+        background-color: rgb(10, 149, 241);
+        color: white;
+    }
+    .active{
+        background-color: rgb(10, 149, 241);
+        color: white;
+    }
+}
+
+// 2번 과제
+.alert {
+    p{
+        margin: 0;
+    }
+    .alert-highlight{
+        font-weight:800;
+    }
+}
+
+@mixin alertStyle($bg-color, $color, $border-color){
+    font-size: 20px;
+    padding: 16px;
+    background-color: $bg-color;
+    color: $color;
+    border-radius: 8px;
+    border: 1px solid $border-color;
+    margin: 12px 0px;
+}
+
+.alert-green{
+    @include alertStyle(rgb(105, 218, 105), green, rgb(145, 244, 145))
+}
+
+.alert-blue{
+    @include alertStyle(rgb(110, 136, 241), blue, rgb(157, 157, 249))
+}
+
+.alert-yellow{
+    @include alertStyle(rgb(105, 115, 0), rgb(255, 255, 148), rgb(222, 222, 151))
+}
+
+// 3번 과제
+.row{
+    display: flex;
+    margin: 12px 0px;
+}
+
+@mixin col($flex){
+    flex: 0 0 $flex;
+    box-sizing: border-box;
+}
+
+.row {
+    .col-6{
+        @include col(50%)
+    }
+    .col-4{
+        @include col(calc(100% / 3))
+    }
+    .col-3{
+        @include col(25%)
+    }
+    div{
+        background-color: rgb(224, 163, 163);
+        font-size: 20px;
+        padding: 16px;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+    }
+    div:last-child{
+        border-right: 1px solid black;
+    }
+}
