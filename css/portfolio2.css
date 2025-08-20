@@ -1,0 +1,196 @@
+p{
+    margin: 0px;
+}
+
+body{
+    margin: 0px;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+}
+
+.portfolio-btn{
+    color: white;
+    background-color: #6fbaf8;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+}
+
+.portfolio-bg{
+    background-color: #f7f9fc;
+    /* background-color: goldenrod; */
+    padding: 8%;
+}
+
+.portfolio-column{
+
+}
+
+/* ------------------ info ------------------ */
+
+.portfolio-info{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 5% 5%;
+    border-radius: 8px;
+    border: 1px solid grey;
+    margin-bottom: 40px;
+}
+
+.portfolio-info-img{
+    margin-right: 40px;
+    flex: 1;
+}
+
+.portfolio-info-img img{
+    border: 1px solid grey;
+    aspect-ratio: 1 / 1;   /* 정사각형 (지원 안되면 width/height 같은 값으로) */
+    width: 100%;           /* 부모 너비에 맞춤 */
+    border-radius: 50%;    /* 원 */
+    object-fit: cover;      /* Flutter의 BoxFit.cover랑 동일 */
+}
+
+.portfolio-info-profile{
+    flex: 3;
+}
+
+.portfolio-info-profile-address{
+    margin-left: 4px;
+    color: #6fbaf8;
+}
+
+.portfolio-info-subInfo{
+    flex: 2;
+    border-left: 2px solid grey;
+    padding: 20px 5%;
+}
+
+.portfolio-info-subInfo-row{
+    margin: 12px 0px;
+}
+
+.portfolio-info-subInfo-title{
+    margin-right: 12px;
+    flex: 1;
+}
+.portfolio-info-subInfo-content{
+    flex: 1;
+    text-align: left;
+}
+
+
+/* ------------------ detail ------------------ */
+
+.portfolio-detail-nav{
+    border-bottom: 2px solid grey;
+    margin-bottom: 20px;
+}
+
+.portfolio-detail-nav-text{
+  display: inline-block;         /* 텍스트 폭만큼만 */
+  padding: 8px 20px;                /* 위아래 패딩은 취향대로 */
+  margin-bottom: -2px;           /* ↓ 회색 보더와 정확히 겹치게 당김 */
+  border-bottom: 2px solid #6fbaf8;
+  color: #6fbaf8;
+  line-height: 1;                /* 라인헤이트로 인한 미세 오차 방지 */
+}
+
+.portfolio-detail-info{
+    display: flex;
+    align-items: flex-start; /* ← 각 아이템 높이를 내용만큼 */
+}
+
+.portfolio-detail-info-box1{
+    flex: 1;
+    padding: 12px 20px 10% 20px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+.portfolio-detail-info-box2{
+    flex: 3;
+    padding: 12px 20px 7% 20px;
+    background-color: white;
+    margin: 0px 20px;
+    border-radius: 4px;
+    border: 1px solid grey;
+}
+
+.portfolio-detail-info-box2-first{
+    padding-bottom: 8%;
+    border-bottom: 1px solid grey;
+}
+
+.portfolio-detail-info-box2-sec-item{
+    border-radius: 20px;
+    border: 1px solid grey;
+    padding: 4px 16px;
+    box-sizing: border-box;
+    margin-right: 12px;
+}
+
+.portfolio-detail-info-box3{
+    flex: 1;
+    padding: 40px 0px;
+    background-color: white;
+    border: 1px solid grey;
+    text-align: center;
+    border-radius: 4px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-detail-info-box3 i {
+    color: #6fbaf8;
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+
+
+.portfolio-detail-img img{
+    border: 1px solid grey;
+    aspect-ratio: 1 / 1;   /* 정사각형 (지원 안되면 width/height 같은 값으로) */
+    width: 50px;           /* 부모 너비에 맞춤 */
+    height: 50px;
+    margin-right: 12px;
+    border-radius: 50%;    /* 원 */
+    object-fit: cover;      /* Flutter의 BoxFit.cover랑 동일 */
+}
+
+.portfolio-detail-profile{
+    flex: 1;
+}
+
+.portfolio-detail-profile-address{
+    margin-left: 4px;
+    color: #6fbaf8;
+    font-size: 12px;
+}
+
+/* 여러개 사용 가능 */
+@media screen and (max-width: 768px){
+    .portfolio-info{
+        display: block;
+    }
+    .portfolio-info-subInfo{
+        flex: none;
+        border-left: none;
+        padding: 20px 5%;
+        margin-top: 40px;
+    }
+    .portfolio-detail-info{
+        display: block;
+        align-items: flex-start; /* ← 각 아이템 높이를 내용만큼 */
+    }
+    .portfolio-detail-info-box2{
+        margin: 20px 0px;
+    }
+}
