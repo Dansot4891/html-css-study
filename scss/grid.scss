@@ -1,0 +1,88 @@
+// 1번 과제
+.grid-container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    // grid-gap: 4px;
+    grid-template-areas: 
+        "header header header header"
+        "side side2 side2 side2" 
+        "side side2 side2 side2";
+}
+
+.grid-container div{
+    border: 1px solid black;
+}
+
+// .grid-nav{
+//     grid-column: 1 / 5;
+// }
+
+// .grid-sidebar{
+//     grid-row: 2 / 4;
+// }
+
+// .grid-sidebar2{
+//     grid-row: 2 / 4;
+//     grid-column: 2 / 5;
+// }
+
+.grid-nav{
+    grid-area: header;
+}
+
+.grid-sidebar{
+    grid-area: side;
+}
+
+.grid-sidebar2{
+    grid-area: side2;
+}
+
+
+@media screen and (max-width: 768px){
+    .grid-container{
+        grid-template-columns: 100px;
+        grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+        grid-template-areas: 
+            "header"
+            "side"
+            "side2"
+            "."
+            "."
+            "."
+            "."
+            "."
+            "."
+            "."
+            "."
+            ".";
+    }
+}
+
+// 2번 과제
+.grid-container2{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+}
+
+.grid-container2 img{
+    width: 100%;
+}
+
+.main-grid{
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+@media screen and (max-width: 768px){
+    .grid-container2{
+        grid-template-columns: 200px;
+        grid-template-rows: 200px 200px 200px 200px 200px 200px;
+    }
+    .main-grid{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+}
