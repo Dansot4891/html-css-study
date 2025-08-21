@@ -1,0 +1,16 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+.admin-nav {
+  background-color: rgb(91, 70, 223);
+  height: 100vh;
+  width: -moz-fit-content;
+  width: fit-content; /* 내부 콘텐츠에 맞춰 최소 너비 */
+}
+.admin-nav i {
+  color: white;
+  font-size: 20px;
+  margin: 12px 12px;
+}/*# sourceMappingURL=admin.css.map */

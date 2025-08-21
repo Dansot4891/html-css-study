@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+}
+
+.admin-nav{
+    background-color: rgb(91, 70, 223);
+    height: 100vh;
+    width: fit-content; /* 내부 콘텐츠에 맞춰 최소 너비 */
+    i{
+        color: white;
+        font-size: 20px;
+        margin: 12px 12px;
+    }
+}
