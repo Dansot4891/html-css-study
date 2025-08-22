@@ -10,15 +10,154 @@
 </head>
 <body>
     <div class="admin-bg">
-        <div class="admin-nav">
-            <div><i class="fa-solid fa-house"></i></div>
-            <div><i class="fa-solid fa-headphones"></i></div>
-            <div><i class="fa-solid fa-flag"></i></div>
-            <div><i class="fa-solid fa-chart-pie"></i></div>
-        </div>
         <div class="admin-page">
-
+            <div class="admin-page-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search" class="search-input">
+                    <button class="search-icon">
+                        <i class="fa-solid fa-search"></i>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="admin-page-bar-inner-stack">
+                        <div class="admin-page-bar-inner-stack-icon"><i class="fa-solid fa-bell"></i></div>
+                        <div class="admin-page-bar-inner-stack-text">5</div>
+                    </div>
+                    <div class="admin-page-bar-inner-stack">
+                        <div class="admin-page-bar-inner-stack-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="admin-page-bar-inner-stack-text">8</div>
+                    </div>
+                    <p style="margin-left: 20px;">Minny Park</p>
+                </div>
+                <div class="menu-bar">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="admin-page-inner">
+                <h2>Dashboard</h2>
+                <div class="inner-row">
+                    <div class="admin-page-inner-card-skyblue">
+                        <div>
+                            <p style="margin-bottom: 12px;">Earings (Monthly)</p>
+                            <p>$400,000</p>
+                        </div>
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <div class="admin-page-inner-card-green">
+                        <div>
+                            <p style="margin-bottom: 12px;">Earings (Annual)</p>
+                            <p>$800,000</p>
+                        </div>
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <div class="admin-page-inner-card-blue">
+                        <div>
+                            <p style="margin-bottom: 12px;">Tasks</p>
+                            <p>13</p>
+                        </div>
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <div class="admin-page-inner-card-yellow">
+                        <div>
+                            <p style="margin-bottom: 12px;">Request</p>
+                            <p>26</p>
+                        </div>
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                </div>
+                <div class="inner-row" style="margin-top: 40px;">
+                    <div class="row-first">
+                        <div class="admin-page-inner-header">
+                            Earings Overview
+                        </div>
+                        <div class="box">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="row-second">
+                        <div class="admin-page-inner-header">
+                            Tasks
+                        </div>
+                        <div class="box">
+                            <ul>
+                                <li>
+                                    <div class="row-bet">
+                                        <p>Borrowed Items</p>
+                                        <div class="num-mark">
+                                            14
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-bet">
+                                        <p>Trello requests</p>
+                                        <div class="num-mark">
+                                            8
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="row-bet">
+                                        <p>Marked Comments</p>
+                                        <div class="num-mark">
+                                            5
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="admin-nav">
+            <div class="admin-nav-row">
+                <i class="fa-solid fa-house"></i>
+                <div class="admin-nav-row-text">Home</div>
+            </div>
+            <div class="admin-nav-row">
+                <i class="fa-solid fa-headphones"></i>
+                <div class="admin-nav-row-text">Services</div>
+            </div>
+            <div class="admin-nav-row">
+                <i class="fa-solid fa-flag"></i>
+                <div class="admin-nav-row-text">Alerts</div>
+            </div>
+            <div class="admin-nav-row">
+                <i class="fa-solid fa-chart-simple"></i>
+                <div class="admin-nav-row-text">Stats</div>
+            </div>
+        </div>        
     </div>
 </body>
 </html>
+
+
+
+<!-- chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+ 
